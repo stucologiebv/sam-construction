@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Behind the Build: Restoring a 19th-Century Home in Luxembourg's Old Town — SAM Construction</title>
+<meta name="description" content="Discover the challenges and rewards of restoring a historic 19th-century home in Luxembourg's Grund district. SAM Construction shares insights on heritage renovation.">
+<meta property="og:title" content="Behind the Build: Restoring a 19th-Century Home in Luxembourg's Old Town — SAM Construction">
+<meta property="og:description" content="Heritage restoration in Luxembourg's Grund district: challenges, permits, and balancing modern comfort with historic preservation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.samconstruction.lu/blog/restoring-old-town-home.html">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Behind the Build: Restoring a 19th-Century Home in Luxembourg's Old Town — SAM Construction">
+<meta name="twitter:description" content="Heritage restoration in Luxembourg's Grund district: challenges, permits, and balancing modern comfort with historic preservation.">
+<link rel="canonical" href="https://www.samconstruction.lu/blog/restoring-old-town-home.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230b1a0b'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='serif' font-size='22' font-weight='600' fill='%23c9a84c'%3ES%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:       #0b1a0b;
+  --bg2:      #0f210f;
+  --bg3:      #132613;
+  --border:   rgba(201,168,76,0.15);
+  --gold:     #c9a84c;
+  --gold2:    #e8c97a;
+  --white:    #f5f2ec;
+  --muted:    rgba(245,242,236,0.45);
+  --green:    #2a5c2a;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Montserrat',sans-serif;
+  font-weight:300;
+  cursor:none;
+  overflow-x:hidden;
+}
+
+.cursor{
+  position:fixed;
+  width:8px;height:8px;
+  background:var(--gold);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+  transition:transform 0.1s;
+  transform:translate(-50%,-50%);
+}
+.cursor-ring{
+  position:fixed;
+  width:36px;height:36px;
+  border:1px solid rgba(201,168,76,0.5);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9998;
+  transition:transform 0.12s ease,width 0.3s,height 0.3s,opacity 0.3s;
+  transform:translate(-50%,-50%);
+}
+body:hover .cursor-ring{opacity:1}
+
+nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:24px 60px;
+  background:rgba(11,26,11,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  display:flex;flex-direction:column;gap:4px;
+  text-decoration:none;
+}
+.logo-main{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:400;
+  letter-spacing:4px;
+  color:var(--white);
+}
+.logo-sub{
+  font-size:8px;letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+.nav-right{display:flex;align-items:center;gap:32px}
+
+.back-link{
+  font-size:11px;font-weight:500;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  transition:color 0.3s;
+  display:flex;align-items:center;gap:8px;
+}
+.back-link:hover{color:var(--white)}
+
+.lang-btn{
+  display:flex;gap:2px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  border-radius:2px;
+  padding:3px;
+}
+.lang-btn button{
+  background:none;border:none;
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;font-weight:600;
+  letter-spacing:1px;
+  color:var(--muted);
+  padding:5px 12px;
+  cursor:none;
+  border-radius:1px;
+  transition:all 0.2s;
+}
+.lang-btn button.active{
+  background:var(--gold);
+  color:var(--bg);
+}
+
+.article-wrapper{
+  max-width:800px;
+  margin:0 auto;
+  padding:160px 60px 100px;
+}
+
+.article-header{
+  margin-bottom:60px;
+}
+
+.article-date{
+  font-size:9px;font-weight:600;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:24px;
+  display:block;
+}
+
+.article-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,5vw,56px);
+  font-weight:300;
+  line-height:1.1;
+  letter-spacing:-0.5px;
+  color:var(--white);
+  margin-bottom:32px;
+}
+
+.article-gold-line{
+  width:80px;height:2px;
+  background:var(--gold);
+}
+
+.article-body p{
+  font-size:15px;
+  line-height:2;
+  color:rgba(245,242,236,0.75);
+  margin-bottom:28px;
+}
+
+.article-body h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:400;
+  color:var(--white);
+  margin-top:48px;
+  margin-bottom:20px;
+}
+
+.article-body h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:400;
+  color:var(--gold);
+  margin-top:36px;
+  margin-bottom:16px;
+}
+
+.article-body ul, .article-body ol{
+  padding-left:24px;
+  margin-bottom:28px;
+}
+
+.article-body li{
+  font-size:15px;
+  line-height:2;
+  color:rgba(245,242,236,0.75);
+  margin-bottom:8px;
+}
+
+.article-body strong{
+  font-weight:600;
+  color:var(--white);
+}
+
+.article-back{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:60px;
+  padding-top:40px;
+  border-top:1px solid var(--border);
+  font-size:10px;font-weight:600;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);
+  text-decoration:none;
+  transition:gap 0.3s, color 0.3s;
+}
+.article-back:hover{gap:16px;color:var(--gold2)}
+
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  padding:50px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+footer p{font-size:11px;color:rgba(245,242,236,0.25)}
+footer span{color:var(--gold)}
+
+.whatsapp-btn{
+  position:fixed;
+  bottom:32px;right:32px;
+  width:60px;height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.3);
+  z-index:800;
+  text-decoration:none;
+  transition:transform 0.3s, box-shadow 0.3s;
+  cursor:none;
+}
+.whatsapp-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 28px rgba(37,211,102,0.45);
+}
+.whatsapp-btn svg{
+  width:32px;height:32px;
+  fill:#fff;
+}
+
+@media(max-width:1024px){
+  nav{padding:20px 30px}
+  .article-wrapper{padding:130px 30px 80px}
+  .article-title{font-size:clamp(28px,6vw,42px)}
+  footer{padding:40px 30px;flex-direction:column;gap:16px;text-align:center}
+  .whatsapp-btn{bottom:24px;right:24px;width:52px;height:52px}
+  .whatsapp-btn svg{width:28px;height:28px}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="../index.html" class="logo">
+    <span class="logo-main">SAM</span>
+    <span class="logo-sub">Construction S.a.r.l</span>
+  </a>
+  <div class="nav-right">
+    <a href="../index.html" class="back-link" data-en="&larr; Back to Home" data-lb="&larr; Zr&eacute;ck op d'Haaptsäit">&larr; Back to Home</a>
+    <div class="lang-btn">
+      <button class="active" onclick="setLang('en')">EN</button>
+      <button onclick="setLang('lb')">LB</button>
+    </div>
+  </div>
+</nav>
+
+<article class="article-wrapper">
+  <header class="article-header">
+    <span class="article-date">February 28, 2026</span>
+    <h1 class="article-title">Behind the Build: Restoring a 19th-Century Home in Luxembourg's Old Town</h1>
+    <div class="article-gold-line"></div>
+  </header>
+
+  <div class="article-body">
+    <p>Nestled along the winding streets below the Bock promontory, Luxembourg's Grund district is one of the most picturesque and historically significant neighbourhoods in all of Europe. Its narrow lanes, sandstone facades, and centuries-old rooflines earned the Old Town and its fortifications UNESCO World Heritage status in 1994. For homeowners fortunate enough to possess property here, the privilege comes with a profound responsibility: preserving the architectural soul of these buildings while making them liveable for the twenty-first century. At SAM Construction, we recently completed one such project -- the careful restoration of a three-storey townhouse dating from 1872 -- and the experience offers valuable lessons for anyone considering heritage renovation in the Grand Duchy.</p>
+
+    <h2>The Challenge of Discovery</h2>
+
+    <p>Heritage restoration begins not with a hammer but with patience and investigation. Before any demolition or construction work could commence, our team spent three weeks conducting a detailed structural survey of the property. Behind layers of twentieth-century plaster, we discovered original sandstone walls in remarkably good condition, along with hand-hewn oak ceiling beams that had been concealed by dropped ceilings installed in the 1970s. However, we also found significant moisture infiltration along the rear facade, compromised load-bearing walls where previous owners had made ill-advised modifications, and a complete absence of any damp-proof course -- typical of buildings from this era. Each discovery required us to adapt our approach, consult with structural engineers, and in several cases revise our plans in coordination with the Sites et Monuments national heritage authority.</p>
+
+    <h2>Navigating the Permit Landscape</h2>
+
+    <p>Working within a UNESCO-protected zone means navigating one of the most rigorous permitting processes in Luxembourg. Every exterior modification -- from the colour of replacement mortar to the profile of new window frames -- must be approved by the Service des Sites et Monuments Nationaux (SSMN). For this project, the permit process took approximately five months, during which we submitted detailed material samples, architectural drawings at 1:20 scale for facade elements, and photographic documentation of existing conditions. Interior modifications, while subject to fewer restrictions, still required building permits from the Ville de Luxembourg, including compliance with fire safety standards that can be particularly challenging to meet in older structures with narrow staircases and timber floors. Our advice to anyone undertaking a similar project: budget a full six to eight months for the permitting phase alone, and engage an architect experienced in heritage work from the very beginning.</p>
+
+    <h2>Balancing Preservation with Modern Comfort</h2>
+
+    <p>The central tension in any heritage restoration is the balance between authenticity and habitability. The homeowners in this case -- a young family relocating from Brussels -- wanted underfloor heating, modern bathrooms, a fully equipped kitchen, and fibre-optic internet without sacrificing the character that drew them to the property in the first place. Achieving this required creative solutions at every turn. We installed a low-profile underfloor heating system within a new insulated screed, carefully routing pipes around the original stone floor slabs that were preserved in the entrance hall. The electrical and data wiring was concealed within custom-milled timber trunking that matched the existing baseboards. In the bathrooms, we used lime-based plasters compatible with the building's natural moisture management rather than cement renders that would have trapped dampness within the old walls.</p>
+
+    <p>Thermal performance posed perhaps the greatest challenge. The SSMN would not permit exterior insulation that would alter the facade's appearance, so we opted for a high-performance interior insulation system using calcium silicate boards. At just 50 millimetres thick, these boards provided meaningful thermal improvement without consuming excessive interior space -- a critical consideration in rooms that were already modest in size. The original single-glazed windows were replaced with bespoke double-glazed units featuring slim profiles and handmade glass that replicates the subtle waviness of nineteenth-century panes, satisfying both the heritage authority and the family's desire for thermal comfort and acoustic insulation from the busy Alzette valley below.</p>
+
+    <h2>Craftsmanship That Honours History</h2>
+
+    <p>Authentic restoration demands tradespeople who understand traditional building methods. For the facade work, we partnered with a master mason specialising in Luxembourg sandstone, sourcing replacement blocks from the same Ernzen quarry that likely supplied the original builders over 150 years ago. Damaged mortar joints were raked out by hand and repointed using a traditional lime mortar mixed to match the original's colour and texture. The oak ceiling beams, once cleaned and treated for woodworm, were left exposed as the homeowners had hoped, their axe marks and natural patina becoming a defining feature of the living spaces. New timber elements -- door frames, staircase balusters, and a rebuilt dormer window -- were crafted from reclaimed oak sourced from a demolished farmhouse in the Mullerthal region, ensuring material continuity with the building's age and character.</p>
+
+    <h2>Lessons Learned and SAM Construction's Approach</h2>
+
+    <p>Every heritage project teaches us something new, and this one reinforced several principles that guide our work. First, thorough investigation before construction begins saves both time and money -- the surprises hidden within old walls are inevitable, but their impact can be managed with proper preparation. Second, maintaining open and proactive communication with heritage authorities is essential; they are not adversaries but partners in preserving Luxembourg's built heritage, and involving them early leads to smoother approvals. Third, the budget for a heritage restoration should include a contingency of at least 15 to 20 percent beyond what a comparable new-build project would require. The results, however, speak for themselves: a home that honours its past while embracing the future, standing as testimony to the enduring quality of Luxembourg's architectural heritage.</p>
+
+    <p>SAM Construction brings deep experience in heritage and renovation projects across Luxembourg. If you are considering restoring a historic property -- whether in the Grund, Clausen, Pfaffenthal, or any of the Grand Duchy's characterful older neighbourhoods -- we would be delighted to discuss your vision and help you navigate the journey from first survey to final handover. Reach out to us for a confidential, no-obligation conversation about your project.</p>
+  </div>
+
+  <a href="../index.html#blog" class="article-back" data-en="&larr; Back to Blog" data-lb="&larr; Zr&eacute;ck zum Blog">&larr; Back to Blog</a>
+</article>
+
+<footer>
+  <p>&copy; 2026 <span>SAM Construction S.&agrave; r.l.</span> &mdash; RCS Luxembourg B306333. <span data-en="All rights reserved." data-lb="All Rechter reserv&eacute;iert.">All rights reserved.</span></p>
+  <p>&#x1F1F1;&#x1F1FA; <span data-en="Luxembourg &mdash; Built with Pride" data-lb="L&euml;tzebuerg &mdash; Mat Stolz gebaut">Luxembourg &mdash; Built with Pride</span></p>
+</footer>
+
+<a href="https://wa.me/352621735" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contact us on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2.667A13.27 13.27 0 002.667 15.89a13.16 13.16 0 001.795 6.663L2.667 29.333l7.005-1.838A13.28 13.28 0 0016.004 29.2 13.27 13.27 0 0029.333 15.89 13.27 13.27 0 0016.004 2.667zm7.68 18.742c-.328.924-1.924 1.766-2.648 1.84-.685.07-1.336.328-4.508-.94-3.828-1.532-6.264-5.465-6.452-5.718-.188-.252-1.536-2.04-1.536-3.892s.97-2.76 1.316-3.14a1.39 1.39 0 011.008-.472c.252 0 .504.003.724.013.232.01.544-.088.852.65.328.784 1.112 2.72 1.208 2.916.097.196.16.424.032.676-.128.252-.192.408-.384.628-.192.22-.404.492-.576.66-.192.188-.392.392-.168.768.224.376.996 1.644 2.14 2.664 1.468 1.308 2.704 1.712 3.088 1.904.384.192.608.16.832-.096.224-.256.96-1.12 1.216-1.504.256-.384.512-.32.864-.192.352.128 2.232 1.052 2.616 1.244.384.192.64.288.736.448.097.16.097.924-.231 1.848z"/></svg>
+</a>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
+});
+function animateRing(){
+  rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a,button,.whatsapp-btn').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    ring.style.width='60px'; ring.style.height='60px';
+    ring.style.borderColor='rgba(201,168,76,0.8)';
+  });
+  el.addEventListener('mouseleave',()=>{
+    ring.style.width='36px'; ring.style.height='36px';
+    ring.style.borderColor='rgba(201,168,76,0.5)';
+  });
+});
+
+function setLang(lang){
+  document.querySelectorAll('.lang-btn button').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-btn button[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const val = el.getAttribute('data-'+lang) || el.getAttribute('data-en');
+    if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder=val;
+    else el.innerHTML=val;
+  });
+}
+</script>
+</body>
+</html>
