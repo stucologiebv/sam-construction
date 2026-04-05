@@ -1,15 +1,30 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --bg:       #0b1a0b;
-  --bg2:      #0f210f;
-  --bg3:      #132613;
-  --border:   rgba(201,168,76,0.15);
-  --gold:     #c9a84c;
-  --gold2:    #e8c97a;
-  --white:    #f5f2ec;
-  --muted:    rgba(245,242,236,0.45);
-  --green:    #2a5c2a;
+  /* Aligned with design-reference.html (sam_logo_3d_v2) */
+  --bg:           #0c1a0e;
+  --bg2:          #0f210f;
+  --bg3:          #132613;
+  --border:       rgba(200,160,48,0.18);
+
+  /* Gold palette — from logo gradient stops */
+  --gold-deep:    #6b5010;
+  --gold-dark:    #8a7020;
+  --gold:         #c8a030;
+  --gold-mid:     #d4a843;
+  --gold-light:   #e0b840;
+  --gold-highlight: #f0d080;
+  --gold2:        #e0b840; /* legacy alias */
+  --gold-gradient: linear-gradient(135deg, #6b5010 0%, #c8a030 40%, #e0b840 70%, #f0d080 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(107,80,16,0.15) 0%, rgba(200,160,48,0.35) 50%, rgba(240,208,128,0.2) 100%);
+
+  --white:        #f5f2ec;
+  --muted:        rgba(245,242,236,0.48);
+  --green:        #2a5c2a;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html{scroll-behavior:smooth}
@@ -17,7 +32,7 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--white);
-  font-family:'Montserrat',sans-serif;
+  font-family:var(--font-sans);
   font-weight:300;
   cursor:none;
   overflow-x:hidden;
@@ -57,7 +72,7 @@ body:hover .cursor-ring{opacity:1}
 }
 .loader.hide{opacity:0;visibility:hidden}
 .loader-logo{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:56px;font-weight:300;
   letter-spacing:8px;
   color:var(--white);
@@ -98,7 +113,7 @@ nav.scrolled{
   display:flex;flex-direction:column;gap:4px;
 }
 .logo-main{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:22px;font-weight:400;
   letter-spacing:4px;
   color:var(--white);
@@ -139,7 +154,7 @@ nav.scrolled{
 }
 .lang-btn button{
   background:none;border:none;
-  font-family:'Montserrat',sans-serif;
+  font-family:var(--font-sans);
   font-size:10px;font-weight:600;
   letter-spacing:1px;
   color:var(--muted);
@@ -212,7 +227,7 @@ nav.scrolled{
 }
 
 .hero-title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:clamp(80px, 12vw, 160px);
   font-weight:300;
   line-height:0.88;
@@ -314,7 +329,7 @@ nav.scrolled{
 }
 .hstat:hover::before{height:100%}
 .hstat-num{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:52px;font-weight:300;
   line-height:1;color:var(--white);
   display:block;
@@ -364,7 +379,7 @@ nav.scrolled{
   animation:marquee 20s linear infinite;
 }
 .marquee-item{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:22px;font-weight:300;font-style:italic;
   color:var(--muted);
   display:flex;align-items:center;gap:60px;
@@ -399,7 +414,7 @@ nav.scrolled{
 }
 
 .display-title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:clamp(52px,7vw,96px);
   font-weight:300;line-height:0.92;
   letter-spacing:-0.5px;
@@ -456,14 +471,14 @@ nav.scrolled{
 .service-item:hover{padding-left:16px}
 
 .si-num{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:13px;font-weight:300;
   color:var(--gold);letter-spacing:1px;
 }
 
 .si-body{}
 .si-name{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:28px;font-weight:400;
   letter-spacing:0.5px;
   margin-bottom:6px;
@@ -540,7 +555,7 @@ nav.scrolled{
 
 .phil-right{}
 .phil-quote{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:32px;font-weight:300;font-style:italic;
   line-height:1.4;
   color:var(--white);
@@ -628,7 +643,7 @@ nav.scrolled{
   transition:all 0.4s 0.1s;
 }
 .proj-name{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:28px;font-weight:400;
   transform:translateY(15px);
   opacity:0;
@@ -647,7 +662,7 @@ nav.scrolled{
 
 .proj-num{
   position:absolute;top:28px;right:28px;
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:64px;font-weight:300;
   color:rgba(255,255,255,0.06);
   line-height:1;
@@ -727,7 +742,7 @@ nav.scrolled{
 .f-group textarea{
   background:none;border:none;
   color:var(--white);
-  font-family:'Montserrat',sans-serif;
+  font-family:var(--font-sans);
   font-size:13px;font-weight:300;
   padding:0 20px 16px;
   outline:none;
@@ -744,7 +759,7 @@ nav.scrolled{
   background:var(--gold);
   color:var(--bg);
   border:none;
-  font-family:'Montserrat',sans-serif;
+  font-family:var(--font-sans);
   font-size:11px;font-weight:700;
   letter-spacing:4px;text-transform:uppercase;
   padding:22px;
@@ -777,7 +792,7 @@ footer{
   margin-bottom:40px;
 }
 .f-brand-name{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:38px;font-weight:300;
   letter-spacing:2px;
   margin-bottom:4px;
@@ -842,7 +857,7 @@ footer{
 }
 .testimonial-card::before{
   content:'\201C';
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:80px;font-weight:300;
   color:var(--gold);
   opacity:0.25;
@@ -850,7 +865,7 @@ footer{
   position:absolute;top:20px;left:28px;
 }
 .testimonial-quote{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:20px;font-weight:300;font-style:italic;
   line-height:1.6;
   color:var(--white);
@@ -909,7 +924,7 @@ footer{
   margin-bottom:16px;
 }
 .blog-card-title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:26px;font-weight:400;
   line-height:1.2;
   margin-bottom:16px;
@@ -960,7 +975,7 @@ footer{
   background:none;border:none;
   width:100%;
   text-align:left;
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:22px;font-weight:400;
   color:var(--white);
   transition:color 0.3s;
@@ -1050,7 +1065,7 @@ footer{
   flex-shrink:0;
 }
 .cookie-btn{
-  font-family:'Montserrat',sans-serif;
+  font-family:var(--font-sans);
   font-size:10px;font-weight:700;
   letter-spacing:3px;text-transform:uppercase;
   padding:14px 28px;
@@ -1109,23 +1124,23 @@ footer{
 .hero-service .eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:32px}
 .hero-service .eyebrow-line{width:60px;height:1px;background:var(--gold)}
 .hero-service .eyebrow-text{font-size:10px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
-.hero-service h1{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;letter-spacing:2px;line-height:1.1;margin-bottom:24px}
+.hero-service h1{font-family:var(--font-display);font-size:72px;font-weight:300;letter-spacing:2px;line-height:1.1;margin-bottom:24px}
 .hero-service .subtitle{font-size:16px;line-height:1.8;color:var(--muted);max-width:700px}
 .content-section{padding:80px 60px;display:grid;grid-template-columns:2fr 1fr;gap:80px}
-.content-main h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;margin-bottom:24px;color:var(--gold2)}
-.content-main h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;margin:40px 0 16px;color:var(--white)}
+.content-main h2{font-family:var(--font-display);font-size:36px;font-weight:400;margin-bottom:24px;color:var(--gold2)}
+.content-main h3{font-family:var(--font-display);font-size:26px;font-weight:400;margin:40px 0 16px;color:var(--white)}
 .content-main p{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:20px}
 .content-main ul{list-style:none;margin:20px 0 30px}
 .content-main ul li{font-size:14px;line-height:1.9;color:var(--muted);padding:6px 0 6px 20px;position:relative}
 .content-main ul li::before{content:'';position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--gold)}
 .sidebar{position:sticky;top:140px;align-self:start}
 .sidebar-box{background:var(--bg2);border:1px solid var(--border);padding:40px;margin-bottom:32px}
-.sidebar-box h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--gold);margin-bottom:24px}
+.sidebar-box h4{font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--gold);margin-bottom:24px}
 .sidebar-box ul{list-style:none}
 .sidebar-box ul li{font-size:13px;line-height:1.8;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--border)}
 .sidebar-box ul li:last-child{border-bottom:none}
 .cta-section{padding:100px 60px;text-align:center;border-top:1px solid var(--border)}
-.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;margin-bottom:16px}
+.cta-section h2{font-family:var(--font-display);font-size:48px;font-weight:300;margin-bottom:16px}
 .cta-section p{font-size:14px;color:var(--muted);margin-bottom:40px}
 .cta-btn{display:inline-block;padding:18px 48px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;transition:all 0.3s}
 .cta-btn:hover{background:var(--gold);color:var(--bg)}
@@ -1136,11 +1151,11 @@ footer{
 .article-wrapper{max-width:800px;margin:0 auto;padding:160px 60px 100px}
 .article-header{margin-bottom:60px}
 .article-date{font-size:9px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block}
-.article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;letter-spacing:-0.5px;color:var(--white);margin-bottom:32px}
+.article-title{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;letter-spacing:-0.5px;color:var(--white);margin-bottom:32px}
 .article-gold-line{width:80px;height:2px;background:var(--gold)}
 .article-body p{font-size:15px;line-height:2;color:rgba(245,242,236,0.75);margin-bottom:28px}
-.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--white);margin-top:48px;margin-bottom:20px}
-.article-body h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--gold);margin-top:36px;margin-bottom:16px}
+.article-body h2{font-family:var(--font-display);font-size:28px;font-weight:400;color:var(--white);margin-top:48px;margin-bottom:20px}
+.article-body h3{font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--gold);margin-top:36px;margin-bottom:16px}
 .article-body ul,.article-body ol{padding-left:24px;margin-bottom:28px}
 .article-body li{font-size:15px;line-height:2;color:rgba(245,242,236,0.75);margin-bottom:8px}
 .article-body strong{font-weight:600;color:var(--white)}
@@ -1277,3 +1292,186 @@ section[id],main[id]{scroll-margin-top:100px}
 
 /* Cookie banner visible states (if not already in file) */
 .cookie-banner.hidden{display:none}
+
+/* ───────────────────────── BRAND ACCENTS (logo-aligned) ───────────────────────── */
+/* Derived from design-reference.html (sam_logo_3d_v2) — 3D gold gradient */
+
+/* Gradient gold text — use on hero eyebrow accent, em highlights, display title spans */
+.gold-gradient-text,
+.hero-eyebrow-text,
+em.accent,
+.display-title em{
+  background:var(--gold-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+
+/* Gold bar divider with 3D shine — replaces flat gold lines on major section breaks */
+.gold-bar{
+  height:2px;
+  width:80px;
+  background:var(--gold-gradient);
+  border:none;
+  margin:0;
+  box-shadow:0 1px 3px rgba(200,160,48,0.3),0 0 12px rgba(240,208,128,0.15);
+}
+
+/* Premium CTA button — gradient fill, subtle glow, matches logo depth */
+.cta-primary{
+  background:var(--gold-gradient);
+  color:var(--bg) !important;
+  border:none !important;
+  box-shadow:0 2px 12px rgba(200,160,48,0.25),0 0 0 1px rgba(240,208,128,0.2) inset;
+  transition:transform 0.3s,box-shadow 0.3s,filter 0.3s;
+}
+.cta-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(200,160,48,0.4),0 0 0 1px rgba(240,208,128,0.35) inset;
+  filter:brightness(1.08);
+}
+
+/* Section heading eyebrow lines — upgrade to gradient */
+.eyebrow-line,
+.hero-eyebrow-line{
+  background:var(--gold-gradient) !important;
+}
+
+/* Hero title — richer display font weight for Playfair Display */
+.hero-title,
+.display-title,
+.hero-service h1,
+.article-title,
+.cta-section h2{
+  font-weight:400;
+  letter-spacing:0.5px;
+}
+.hero-title-line{font-weight:500}
+
+/* Accent on philosophy quote — italic Playfair at 500 looks premium */
+.phil-quote,
+blockquote.phil-quote{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:500;
+}
+
+/* Service number — gradient gold for the "01..10" labels */
+.si-num,
+.proj-num,
+.pp-icon{
+  background:var(--gold-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+
+/* Testimonial cards — subtle gradient border */
+.testimonial-card{
+  position:relative;
+}
+.testimonial-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  padding:1px;
+  background:var(--gold-gradient-soft);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+  opacity:0.6;
+}
+
+/* Marquee — gradient dots */
+.marquee-dot{
+  background:var(--gold-gradient) !important;
+}
+
+/* Nav logo underline on hover */
+nav .logo:hover .logo-sub{
+  background:var(--gold-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Scroll cue bar — gradient */
+.scroll-cue-bar{
+  background:var(--gold-gradient) !important;
+}
+
+/* Form submit button — match CTA style */
+.f-submit{
+  background:var(--gold-gradient) !important;
+  color:var(--bg) !important;
+  border:none !important;
+  box-shadow:0 2px 12px rgba(200,160,48,0.25),0 0 0 1px rgba(240,208,128,0.2) inset;
+  transition:transform 0.3s,box-shadow 0.3s,filter 0.3s;
+}
+.f-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(200,160,48,0.4);
+  filter:brightness(1.08);
+}
+
+/* Service CTA button (sub pages) */
+.cta-btn{
+  position:relative;
+  overflow:hidden;
+}
+.cta-btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--gold-gradient);
+  opacity:0;
+  transition:opacity 0.3s;
+  z-index:-1;
+}
+.cta-btn:hover{
+  background:transparent !important;
+  color:var(--bg) !important;
+  border-color:transparent !important;
+}
+.cta-btn:hover::before{opacity:1}
+
+/* WhatsApp button — gold gradient ring */
+.whatsapp-btn{
+  box-shadow:0 4px 16px rgba(0,0,0,0.3),0 0 0 1px rgba(200,160,48,0.35);
+}
+
+/* Section divider with diamond accent (inspired by logo rhombus shape) */
+.section-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  padding:40px 0;
+}
+.section-divider::before,
+.section-divider::after{
+  content:'';
+  flex:1;
+  max-width:120px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold) 50%,transparent);
+}
+.section-divider-diamond{
+  width:10px;height:10px;
+  background:var(--gold-gradient);
+  transform:rotate(45deg);
+  box-shadow:0 0 12px rgba(240,208,128,0.3);
+}
+
+/* Tagline format "LUXEMBOURG · EST. 2009" — matches logo */
+.brand-tagline{
+  font-family:var(--font-sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);
+}
