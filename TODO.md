@@ -508,4 +508,93 @@ sam-construction/
 
 _Hier tussentijdse notes zetten zodat bij resume duidelijk is waar we staan._
 
-- [2026-04-05] Audit compleet, nog niks gefixt. Volgende sessie: start bij Fase 1 / C1.
+- [2026-04-05] Audit compleet.
+- [2026-04-05] Sessie 1 gedaan (commit d0625e9):
+  - ✅ C1 assets/ gecommit
+  - ✅ C2 CSS paden relatief
+  - ✅ C3 Cloudflare email artifact vervangen door mailto placeholder
+  - ⏳ C4 telefoon/WA: tijdelijke placeholder `+352 000 000 000` — **echt nummer nodig**
+  - ⏳ C5 form: inputs hebben nu name/id/labels/required/consent/honeypot — **backend URL nodig** (Formspree/Web3Forms/Cloudflare)
+  - ⏳ C6 maps: iframe nog fake — **echte embed URL nodig**
+  - ✅ C7 mobile hamburger nav (CSS + JS)
+  - ✅ C8 footer legal links → echte pagina's (mentions-legales / privacy / cookies / terms) — stubs met [TO PROVIDE]
+  - ⏳ C9 CNAME/DNS — **domein nog niet aangeschaft**
+  - ✅ H1 base64 images extracted (index.html 572KB → 51KB)
+  - ✅ H2 alt-teksten op alle 6 images
+  - ✅ H3 robots.txt
+  - ✅ H4 sitemap.xml
+  - ✅ H5 404.html
+  - ✅ H6 og:image + twitter:image (placeholder = hero.jpg — **echte OG image 1200×630 nodig**)
+  - 🟡 H7 Schema.org uitgebreid met email/image/logo/geo/openingHours/priceRange — **nog sameAs (social), echte telefoon, VAT**
+  - 🟡 H8 hreflang en+lb gedaan — fr+de volgt in fase 4
+  - ✅ H9 Google Fonts preconnect
+  - 🟡 H10 jaartallen — "15+" staat nog op sommige plekken, 17 is correct
+  - ✅ H11 auto-year in footer
+  - ✅ H12 duplicate JS → assets/main.js
+  - ✅ H13 cursor off op touch (media query + .is-touch class)
+  - ✅ H14 loader CSS failsafe (3s)
+  - ✅ H15 "All projects" CTA → "Start a project"
+  - ✅ M1 main landmark
+  - ✅ M2 FAQ aria-expanded
+  - ✅ M3 form labels for/id
+  - ✅ M4 skip-to-content link
+  - ✅ M10 lang persist (localStorage) + html lang update
+  - ✅ M13 scroll-margin-top op sections
+  - ✅ M15 prefers-reduced-motion respect
+- [2026-04-05] Volgende: wachten op "please provide" lijst van gebruiker (zie onderaan).
+
+## Wat ik nodig heb van jou (geprioriteerd)
+
+### 🔴 BLOKKEREND voor een werkende live site
+1. **Telefoonnummer** — volledig LU mobiel (9 cijfers na +352). Format: `+352 621 XXX XXX`
+2. **Emailadres** — bevestig `info@samconstruction.lu` of ander adres
+3. **Form backend keuze** — opties:
+   - **Formspree** (gratis 50/maand, GDPR-compliant EU servers): alleen URL nodig
+   - **Web3Forms** (gratis onbeperkt, EU hosting): alleen access key nodig
+   - **Cloudflare Pages Functions** (als we naar CF Pages verhuizen, volledig eigen)
+   - **Mailto fallback** (opent mailclient, niet ideaal maar werkt)
+   - Welke wil je?
+4. **Echte Google Maps embed URL** — open Google Maps → zoek "18A Griffelslee Michelau" → Share → Embed a map → kopieer HTML
+5. **Domein** — wanneer aanschaf? Aanbeveling: `samconstruction.lu` via LU registrar (DNS Luxembourg, EuroDNS, gandi, namecheap). Zodra geregistreerd: CNAME file + DNS instellen.
+
+### 🟠 NODIG VOOR JURIDISCHE CORRECTHEID (legal pages completen)
+6. **Numéro TVA** (`LUxxxxxxxx` formaat)
+7. **Autorisation d'établissement nummer** (van Ministère de l'Économie / Direction générale PME — verplicht voor bouw)
+8. **Gérant(s) namen** — volledige namen van de zaakvoerder(s)
+9. **Maatschappelijk kapitaal** (meestal €12.500 voor S.à r.l.)
+10. **Assurance décennale** — verzekeraar naam + polisnummer
+11. **Assurance RC Professionnelle** — verzekeraar naam + polisnummer
+12. **Hosting provider** bevestigen (GitHub Pages nu, Cloudflare Pages aanbevolen)
+13. **Chambre des Métiers lidmaatschapsnummer** (indien lid)
+14. **Maître Artisan / Diplôme de Maîtrise** titel-houder(s)
+15. **FDA (Fédération des Entrepreneurs) lidmaatschap** ja/nee + nummer
+
+### 🟡 NODIG VOOR PROFESSIONELE CONTENT
+16. **Echte projectfoto's** — huidige 4 zijn van onduidelijke herkomst, beter eigen werk met toestemming
+17. **OG share image** — 1200×630px, kan zelfde als hero zijn of apart ontwerp
+18. **Team foto's + bios** — voor About/Team pagina
+19. **Echte testimonials** — de huidige 3 zijn gegenereerd, echte klanten met toestemming zijn goud
+20. **Bedrijfslogo** — SVG bij voorkeur, of hoogresolutie PNG
+21. **Social media accounts** — LinkedIn, Facebook, Instagram URLs voor Schema.org `sameAs` + footer iconen
+22. **Werkgebied** — heel Luxemburg? Alleen Nord/Nordstad? Grensstreek BE/DE/FR ook?
+23. **Openingstijden** (nu geplaatst ma-vr 08:00-17:00, graag bevestigen)
+
+### 🌍 MEERTALIGHEID (Fase 4)
+24. **Vertalingen** — wil je dat ik ruwe FR + DE vertalingen genereer die jij (of een vertaler) later nakijkt, of wacht je op professionele vertaler? Voor bouw-jargon (commodo, décennale, Bauhärepflicht) raad ik aan minimaal een nalees-ronde.
+
+### 💼 Google Business Profile (Fase 5)
+25. Wanneer we de kernzaken klaar hebben, help ik je met: GBP aanmaken, Editus.lu, Pages Jaunes, NAP consistency checklist.
+
+---
+
+## Quick reference — wat staat waar
+
+| Wat | Bestand | Regel(s) |
+|---|---|---|
+| Telefoon placeholder | index.html, alle sub-pagina's | in contact-row + WA link + JSON-LD |
+| Email placeholder | index.html:418 | `info@samconstruction.lu` |
+| Maps iframe (fake) | index.html:422 | placeholder coords |
+| Form (backend TODO) | index.html:427-475 | `<form method="post" novalidate>` — geen action |
+| Schema.org | index.html:18-64 | LocalBusiness JSON-LD |
+| Legal stubs | mentions-legales.html, privacy.html, cookies.html, terms.html | alle [TO PROVIDE] velden |
+| TODO tussen sessies | TODO.md (dit bestand) | |
