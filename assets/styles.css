@@ -211,13 +211,15 @@ nav.scrolled{
   position:relative;z-index:2;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end;
-  padding:140px 60px 80px; /* top padding reserves space for fixed nav + logo */
+  justify-content:space-between; /* eyebrow top (safe area), title bottom */
+  padding:150px 60px 80px;       /* top padding reserves space for fixed nav + logo */
+  min-height:100%;
 }
 
 .hero-eyebrow{
   display:flex;align-items:center;gap:16px;
   margin-bottom:28px;
+  padding-left:0;                /* eyebrow line starts at left, title below aligns left */
   opacity:0;
   animation:revealUp 1s 1.8s cubic-bezier(0.16,1,0.3,1) forwards;
 }
