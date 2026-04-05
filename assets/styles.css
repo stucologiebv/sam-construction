@@ -1475,3 +1475,29 @@ nav .logo:hover .logo-sub{
   text-transform:uppercase;
   color:var(--gold);
 }
+
+/* ── Nav logo IMAGE (real sam_logo_3d_v2) ── */
+nav a.logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  line-height:0;
+}
+.logo-img{
+  display:block;
+  height:56px;
+  width:auto;
+  max-width:280px;
+  transition:transform 0.3s,filter 0.3s;
+}
+nav.scrolled .logo-img{height:44px}
+nav a.logo:hover .logo-img{
+  filter:drop-shadow(0 0 12px rgba(240,208,128,0.25));
+}
+@media(max-width:1024px){
+  .logo-img{height:44px;max-width:200px}
+  nav.scrolled .logo-img{height:38px}
+}
+@media(max-width:480px){
+  .logo-img{height:38px;max-width:160px}
+}
