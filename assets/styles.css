@@ -211,18 +211,32 @@ nav.scrolled{
   position:relative;z-index:2;
   display:flex;
   flex-direction:column;
-  justify-content:space-between; /* eyebrow top (safe area), title bottom */
-  padding:150px 60px 80px;       /* top padding reserves space for fixed nav + logo */
+  justify-content:space-between; /* brand logo top, title bottom */
+  padding:140px 60px 80px;
   min-height:100%;
 }
 
-.hero-eyebrow{
-  display:flex;align-items:center;gap:16px;
-  margin-bottom:28px;
-  padding-left:0;                /* eyebrow line starts at left, title below aligns left */
+/* Prominent hero brand logo (replaces eyebrow — logo has its own tagline) */
+.hero-brand{
+  display:block;
+  margin-bottom:20px;
   opacity:0;
-  animation:revealUp 1s 1.8s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation:revealUp 1s 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
 }
+.hero-brand-svg{
+  display:block;
+  height:240px;
+  width:auto;
+  filter:drop-shadow(0 4px 30px rgba(0,0,0,0.4));
+}
+@media(max-width:1024px){
+  .hero-brand-svg{height:180px}
+}
+@media(max-width:480px){
+  .hero-brand-svg{height:140px}
+}
+
+.hero-eyebrow{display:none} /* legacy, replaced by .hero-brand */
 .hero-eyebrow-line{
   width:50px;height:1px;
   background:var(--gold);
@@ -235,12 +249,12 @@ nav.scrolled{
 
 .hero-title{
   font-family:var(--font-display);
-  font-size:clamp(80px, 12vw, 160px);
+  font-size:clamp(56px, 8.5vw, 120px);
   font-weight:300;
-  line-height:0.88;
+  line-height:0.92;
   letter-spacing:-1px;
   margin-bottom:40px;
-  overflow:hidden;
+  overflow:visible;
 }
 .hero-title-line{
   display:block;
@@ -1490,28 +1504,37 @@ nav a.logo{
   text-decoration:none;
   line-height:0;
 }
+/* Nav logo: small secondary mark (big prominent version lives in hero) */
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:88px;
+  height:56px;
   width:auto;
   max-width:none;
-  transition:transform 0.3s,filter 0.3s;
+  opacity:0;                         /* hidden by default on home */
+  transform:translateY(-4px);
+  transition:opacity 0.4s,transform 0.4s,filter 0.3s;
+  pointer-events:none;
 }
 nav.scrolled .logo-img,
-nav.scrolled .nav-logo-svg{height:64px}
+nav.scrolled .nav-logo-svg{
+  opacity:1;                         /* fade in when user scrolls past hero */
+  transform:translateY(0);
+  pointer-events:auto;
+  height:48px;
+}
+/* On sub-pages (services/, blog/, legal) there's no hero so show logo immediately */
+body.has-nav-logo .nav-logo-svg,
+body.has-nav-logo .logo-img{
+  opacity:1;transform:none;pointer-events:auto;
+}
 nav a.logo:hover .logo-img,
 nav a.logo:hover .nav-logo-svg{
-  filter:drop-shadow(0 0 16px rgba(240,208,128,0.4));
+  filter:drop-shadow(0 0 12px rgba(240,208,128,0.4));
 }
-/* Override old .logo container rule that stacks vertically */
-nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0}
+nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0;min-width:60px}
 
 @media(max-width:1024px){
-  .logo-img,.nav-logo-svg{height:68px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:52px}
-}
-@media(max-width:480px){
-  .logo-img,.nav-logo-svg{height:56px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:44px}
+  .logo-img,.nav-logo-svg{height:44px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:40px}
 }
