@@ -212,7 +212,7 @@ nav.scrolled{
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
-  padding:0 60px 80px;
+  padding:140px 60px 80px; /* top padding reserves space for fixed nav + logo */
 }
 
 .hero-eyebrow{
@@ -1491,25 +1491,25 @@ nav a.logo{
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:120px;
+  height:88px;
   width:auto;
   max-width:none;
   transition:transform 0.3s,filter 0.3s;
 }
 nav.scrolled .logo-img,
-nav.scrolled .nav-logo-svg{height:80px}
+nav.scrolled .nav-logo-svg{height:64px}
 nav a.logo:hover .logo-img,
 nav a.logo:hover .nav-logo-svg{
-  filter:drop-shadow(0 0 20px rgba(240,208,128,0.4));
+  filter:drop-shadow(0 0 16px rgba(240,208,128,0.4));
 }
 /* Override old .logo container rule that stacks vertically */
 nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0}
 
 @media(max-width:1024px){
-  .logo-img,.nav-logo-svg{height:90px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:64px}
+  .logo-img,.nav-logo-svg{height:68px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:52px}
 }
 @media(max-width:480px){
-  .logo-img,.nav-logo-svg{height:64px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:52px}
+  .logo-img,.nav-logo-svg{height:56px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:44px}
 }
