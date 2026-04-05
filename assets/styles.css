@@ -98,14 +98,14 @@ nav{
   position:fixed;top:0;left:0;right:0;
   z-index:500;
   display:flex;align-items:center;justify-content:space-between;
-  padding:32px 60px;
+  padding:20px 60px;
   mix-blend-mode:normal;
   transition:padding 0.4s, background 0.4s;
 }
 nav.scrolled{
-  padding:20px 60px;
-  background:rgba(11,26,11,0.95);
-  backdrop-filter:blur(12px);
+  padding:14px 60px;
+  background:rgba(12,26,14,0.92);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
 }
 
@@ -1491,24 +1491,25 @@ nav a.logo{
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:64px;
+  height:100px;
   width:auto;
-  max-width:320px;
+  max-width:420px;
   transition:transform 0.3s,filter 0.3s;
 }
 nav.scrolled .logo-img,
-nav.scrolled .nav-logo-svg{height:50px}
+nav.scrolled .nav-logo-svg{height:72px}
 nav a.logo:hover .logo-img,
 nav a.logo:hover .nav-logo-svg{
-  filter:drop-shadow(0 0 12px rgba(240,208,128,0.3));
+  filter:drop-shadow(0 0 16px rgba(240,208,128,0.35));
 }
 /* Override old .logo container rule that stacks vertically */
-nav a.logo{flex-direction:row}
+nav a.logo{flex-direction:row;padding:0;margin:0}
 
 @media(max-width:1024px){
-  .logo-img,.nav-logo-svg{height:50px;max-width:240px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:42px}
+  .logo-img,.nav-logo-svg{height:72px;max-width:300px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:60px}
 }
 @media(max-width:480px){
-  .logo-img,.nav-logo-svg{height:42px;max-width:180px}
+  .logo-img,.nav-logo-svg{height:56px;max-width:220px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:48px}
 }
