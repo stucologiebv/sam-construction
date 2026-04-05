@@ -176,7 +176,7 @@ nav.scrolled{
 /* ── HERO ── */
 .hero{
   position:relative;
-  height:100vh;
+  min-height:100vh;        /* can grow if content is taller (prevents overlap) */
   display:grid;
   grid-template-rows:1fr auto;
   overflow:hidden;
@@ -219,21 +219,24 @@ nav.scrolled{
 /* Prominent hero brand logo (replaces eyebrow — logo has its own tagline) */
 .hero-brand{
   display:block;
-  margin-bottom:20px;
+  margin-bottom:0;
   opacity:0;
   animation:revealUp 1s 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
 }
 .hero-brand-svg{
   display:block;
-  height:240px;
+  height:180px;
   width:auto;
   filter:drop-shadow(0 4px 30px rgba(0,0,0,0.4));
 }
+@media(max-width:1200px){
+  .hero-brand-svg{height:150px}
+}
 @media(max-width:1024px){
-  .hero-brand-svg{height:180px}
+  .hero-brand-svg{height:130px}
 }
 @media(max-width:480px){
-  .hero-brand-svg{height:140px}
+  .hero-brand-svg{height:100px}
 }
 
 .hero-eyebrow{display:none} /* legacy, replaced by .hero-brand */
@@ -249,11 +252,11 @@ nav.scrolled{
 
 .hero-title{
   font-family:var(--font-display);
-  font-size:clamp(56px, 8.5vw, 120px);
+  font-size:clamp(44px, 7vw, 96px);
   font-weight:300;
-  line-height:0.92;
+  line-height:0.95;
   letter-spacing:-1px;
-  margin-bottom:40px;
+  margin-bottom:30px;
   overflow:visible;
 }
 .hero-title-line{
@@ -1504,30 +1507,18 @@ nav a.logo{
   text-decoration:none;
   line-height:0;
 }
-/* Nav logo: small secondary mark (big prominent version lives in hero) */
+/* Nav logo: always-visible small secondary mark (big version lives in hero) */
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:56px;
+  height:54px;
   width:auto;
   max-width:none;
-  opacity:0;                         /* hidden by default on home */
-  transform:translateY(-4px);
-  transition:opacity 0.4s,transform 0.4s,filter 0.3s;
-  pointer-events:none;
+  transition:filter 0.3s,height 0.3s;
 }
 nav.scrolled .logo-img,
-nav.scrolled .nav-logo-svg{
-  opacity:1;                         /* fade in when user scrolls past hero */
-  transform:translateY(0);
-  pointer-events:auto;
-  height:48px;
-}
-/* On sub-pages (services/, blog/, legal) there's no hero so show logo immediately */
-body.has-nav-logo .nav-logo-svg,
-body.has-nav-logo .logo-img{
-  opacity:1;transform:none;pointer-events:auto;
-}
+nav.scrolled .nav-logo-svg{height:44px}
+
 nav a.logo:hover .logo-img,
 nav a.logo:hover .nav-logo-svg{
   filter:drop-shadow(0 0 12px rgba(240,208,128,0.4));
@@ -1535,6 +1526,6 @@ nav a.logo:hover .nav-logo-svg{
 nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0;min-width:60px}
 
 @media(max-width:1024px){
-  .logo-img,.nav-logo-svg{height:44px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:40px}
+  .logo-img,.nav-logo-svg{height:42px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:38px}
 }
