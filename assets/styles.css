@@ -220,23 +220,28 @@ nav.scrolled{
 .hero-brand{
   display:block;
   margin-bottom:0;
+  /* Shift right so the logo visually centers above the title's widest line ("Excellence.") */
+  margin-left:clamp(40px, 10vw, 200px);
   opacity:0;
   animation:revealUp 1s 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
 }
 .hero-brand-svg{
   display:block;
-  height:180px;
+  height:260px;
   width:auto;
-  filter:drop-shadow(0 4px 30px rgba(0,0,0,0.4));
+  filter:drop-shadow(0 6px 40px rgba(0,0,0,0.5));
 }
-@media(max-width:1200px){
-  .hero-brand-svg{height:150px}
+@media(max-width:1440px){
+  .hero-brand-svg{height:220px}
+  .hero-brand{margin-left:clamp(30px, 8vw, 160px)}
 }
 @media(max-width:1024px){
-  .hero-brand-svg{height:130px}
+  .hero-brand-svg{height:180px}
+  .hero-brand{margin-left:clamp(20px, 6vw, 100px)}
 }
-@media(max-width:480px){
-  .hero-brand-svg{height:100px}
+@media(max-width:640px){
+  .hero-brand-svg{height:140px}
+  .hero-brand{margin-left:0}
 }
 
 .hero-eyebrow{display:none} /* legacy, replaced by .hero-brand */
