@@ -158,14 +158,19 @@ nav.scrolled{
   font-size:10px;font-weight:600;
   letter-spacing:1px;
   color:var(--muted);
-  padding:5px 12px;
+  padding:5px 9px;
   cursor:none;
   border-radius:1px;
   transition:all 0.2s;
 }
+.lang-btn button:hover{color:var(--gold-light)}
 .lang-btn button.active{
-  background:var(--gold);
+  background:var(--gold-gradient);
   color:var(--bg);
+  box-shadow:0 0 8px rgba(240,208,128,0.2);
+}
+@media(max-width:1024px){
+  .lang-btn button{padding:4px 7px;font-size:9px}
 }
 
 /* ── HERO ── */
@@ -1483,21 +1488,27 @@ nav a.logo{
   text-decoration:none;
   line-height:0;
 }
-.logo-img{
+.logo-img,
+.nav-logo-svg{
   display:block;
-  height:56px;
+  height:64px;
   width:auto;
-  max-width:280px;
+  max-width:320px;
   transition:transform 0.3s,filter 0.3s;
 }
-nav.scrolled .logo-img{height:44px}
-nav a.logo:hover .logo-img{
-  filter:drop-shadow(0 0 12px rgba(240,208,128,0.25));
+nav.scrolled .logo-img,
+nav.scrolled .nav-logo-svg{height:50px}
+nav a.logo:hover .logo-img,
+nav a.logo:hover .nav-logo-svg{
+  filter:drop-shadow(0 0 12px rgba(240,208,128,0.3));
 }
+/* Override old .logo container rule that stacks vertically */
+nav a.logo{flex-direction:row}
+
 @media(max-width:1024px){
-  .logo-img{height:44px;max-width:200px}
-  nav.scrolled .logo-img{height:38px}
+  .logo-img,.nav-logo-svg{height:50px;max-width:240px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:42px}
 }
 @media(max-width:480px){
-  .logo-img{height:38px;max-width:160px}
+  .logo-img,.nav-logo-svg{height:42px;max-width:180px}
 }

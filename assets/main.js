@@ -106,13 +106,31 @@
       else el.textContent = val;
     });
   };
-  // Restore saved lang
-  try {
-    var saved = localStorage.getItem(LANG_KEY);
-    if (saved && supported.indexOf(saved) !== -1 && saved !== 'en') {
-      window.setLang(saved);
+  // Restore language: URL ?lang= takes priority, then localStorage, then browser, then EN default
+  (function initLang() {
+    var chosen = null;
+    // 1. URL param
+    var m = window.location.search.match(/[?&]lang=([a-z]{2})/i);
+    if (m && supported.indexOf(m[1].toLowerCase()) !== -1) {
+      chosen = m[1].toLowerCase();
     }
-  } catch (e) {}
+    // 2. localStorage
+    if (!chosen) {
+      try {
+        var saved = localStorage.getItem(LANG_KEY);
+        if (saved && supported.indexOf(saved) !== -1) chosen = saved;
+      } catch (e) {}
+    }
+    // 3. Browser language (pick first match)
+    if (!chosen && navigator.language) {
+      var bl = navigator.language.slice(0, 2).toLowerCase();
+      if (supported.indexOf(bl) !== -1) chosen = bl;
+    }
+    // 4. Apply (default EN stays as-is in HTML)
+    if (chosen && chosen !== 'en') {
+      window.setLang(chosen);
+    }
+  })();
 
   // ── FAQ accordion ──
   document.querySelectorAll('.faq-question').forEach(function (btn) {
