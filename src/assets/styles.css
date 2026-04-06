@@ -474,21 +474,21 @@ nav.scrolled{
   overflow:hidden;
   white-space:nowrap;
   background:var(--bg2);
-  padding:20px 0;
+  padding:10px 0;
 }
 .marquee-track{
-  display:inline-flex;gap:60px;
+  display:inline-flex;gap:36px;
   animation:marquee 20s linear infinite;
 }
 .marquee-item{
   font-family:var(--font-display);
-  font-size:22px;font-weight:300;font-style:italic;
+  font-size:13px;font-weight:300;font-style:italic;
   color:var(--muted);
-  display:flex;align-items:center;gap:60px;
+  display:flex;align-items:center;gap:36px;
   flex-shrink:0;
 }
 .marquee-dot{
-  width:6px;height:6px;
+  width:4px;height:4px;
   border-radius:50%;
   background:var(--gold);
   flex-shrink:0;
