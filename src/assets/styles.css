@@ -717,13 +717,14 @@ nav.scrolled{
 .proj-slider{position:relative;overflow:hidden}
 .proj-track{
   display:flex;
-  gap:3px;
+  gap:20px;
   transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);
 }
 .proj-track .proj{
-  min-width:calc((100% - 6px) / 3);
+  min-width:calc((100% - 40px) / 3);
   height:500px;
   flex-shrink:0;
+  border-radius:4px;
 }
 .proj-slider-nav{
   display:flex;
