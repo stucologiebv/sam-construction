@@ -244,7 +244,7 @@ nav.scrolled{
   .hero-brand{margin-left:0}
 }
 
-.hero-eyebrow{display:none} /* legacy, replaced by .hero-brand */
+/* hero-brand no longer used — hero-eyebrow is the active eyebrow */
 .hero-eyebrow-line{
   width:50px;height:1px;
   background:var(--gold);
@@ -1512,25 +1512,29 @@ nav a.logo{
   text-decoration:none;
   line-height:0;
 }
-/* Nav logo: always-visible small secondary mark (big version lives in hero) */
+/* Nav logo */
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:54px;
+  height:80px;
   width:auto;
   max-width:none;
   transition:filter 0.3s,height 0.3s;
 }
 nav.scrolled .logo-img,
-nav.scrolled .nav-logo-svg{height:44px}
+nav.scrolled .nav-logo-svg{height:56px}
 
 nav a.logo:hover .logo-img,
 nav a.logo:hover .nav-logo-svg{
-  filter:drop-shadow(0 0 12px rgba(240,208,128,0.4));
+  filter:drop-shadow(0 0 14px rgba(240,208,128,0.4));
 }
 nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0;min-width:60px}
 
 @media(max-width:1024px){
-  .logo-img,.nav-logo-svg{height:42px}
-  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:38px}
+  .logo-img,.nav-logo-svg{height:60px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:48px}
+}
+@media(max-width:480px){
+  .logo-img,.nav-logo-svg{height:50px}
+  nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:42px}
 }
