@@ -209,7 +209,8 @@
   var dotsWrap = document.getElementById('projDots');
   if (track && prevBtn && nextBtn && dotsWrap) {
     var slides = track.querySelectorAll('.proj');
-    var visible = 3;
+    var isMobile = window.innerWidth <= 768;
+    var visible = isMobile ? 1 : 3;
     var current = 0;
     var total = slides.length;
     var maxPos = Math.max(total - visible, 0);
@@ -219,7 +220,7 @@
     for (var i = 0; i <= maxPos; i++) {
       var dot = document.createElement('button');
       dot.className = 'proj-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to position ' + (i + 1));
+      dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
       dot.dataset.index = i;
       dotsWrap.appendChild(dot);
     }
@@ -245,6 +246,35 @@
     dotsWrap.addEventListener('click', function(e) {
       var dot = e.target.closest('.proj-dot');
       if (dot) { goTo(parseInt(dot.dataset.index)); resetAuto(); }
+    });
+
+    // Touch swipe support
+    var startX = 0, startY = 0, deltaX = 0, swiping = false;
+    track.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      deltaX = 0;
+      swiping = true;
+      track.style.transition = 'none';
+    }, { passive: true });
+    track.addEventListener('touchmove', function(e) {
+      if (!swiping) return;
+      deltaX = e.touches[0].clientX - startX;
+      var deltaY = e.touches[0].clientY - startY;
+      // Only swipe horizontally
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        var basePct = current * (100 / visible);
+        var dragPct = (deltaX / track.parentElement.offsetWidth) * 100;
+        track.style.transform = 'translateX(' + (-basePct + dragPct) + '%)';
+      }
+    }, { passive: true });
+    track.addEventListener('touchend', function() {
+      if (!swiping) return;
+      swiping = false;
+      track.style.transition = '';
+      if (deltaX < -50) { goTo(current + 1); resetAuto(); }
+      else if (deltaX > 50) { goTo(current - 1); resetAuto(); }
+      else { goTo(current); }
     });
 
     startAuto();
