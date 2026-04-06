@@ -75,6 +75,16 @@
         document.body.classList.remove('nav-open');
       });
     });
+    // Mobile: toggle services dropdown on tap
+    var hasDropdown = navLinks.querySelector('.has-dropdown');
+    if (hasDropdown) {
+      var label = hasDropdown.querySelector('.nav-label');
+      if (label) {
+        label.addEventListener('click', function () {
+          hasDropdown.classList.toggle('dropdown-open');
+        });
+      }
+    }
   }
 
   // ── Reveal on scroll ──
