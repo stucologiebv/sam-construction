@@ -1516,7 +1516,7 @@ nav a.logo{
 .logo-img,
 .nav-logo-svg{
   display:block;
-  height:160px;
+  height:140px;
   width:auto;
   max-width:none;
   transition:filter 0.3s,height 0.3s;
