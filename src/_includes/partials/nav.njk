@@ -29,6 +29,7 @@
       <li{% if page.url == '/contact/' %} class="active"{% endif %}><a href="{{ '/contact/' | url }}" class="nav-contact-btn" data-fr="Contact" data-de="Kontakt" data-en="Contact" data-lb="Kontakt">Contact</a></li>
     </ul>
     {% include "partials/lang-switcher.njk" %}
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>

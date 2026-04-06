@@ -27,6 +27,16 @@
   --font-sans:    'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+[data-theme="light"]{
+  --bg:           #f5f2ec;
+  --bg2:          #ebe7df;
+  --bg3:          #e2ded6;
+  --border:       rgba(107,80,16,0.18);
+  --white:        #1a1a18;
+  --muted:        rgba(26,26,24,0.55);
+  --green:        #d4e8d4;
+}
+
 html{scroll-behavior:smooth;overflow-x:hidden}
 
 body{
@@ -1811,4 +1821,32 @@ nav a.logo{flex-direction:row;padding:0;margin:0;line-height:0;min-width:60px}
 @media(max-width:480px){
   .logo-img,.nav-logo-svg{height:50px}
   nav.scrolled .logo-img,nav.scrolled .nav-logo-svg{height:42px}
+}
+
+/* ── Light mode overrides ── */
+[data-theme="light"] .hero-media img{filter:brightness(0.6) saturate(0.8)}
+[data-theme="light"] .loader{background:var(--bg)}
+[data-theme="light"] .cursor{background:#8a7020}
+[data-theme="light"] .cursor-ring{border-color:rgba(107,80,16,0.3)}
+[data-theme="light"] nav.scrolled{background:rgba(245,242,236,0.92)}
+[data-theme="light"] .dropdown-inner{background:rgba(245,242,236,0.97)}
+[data-theme="light"] .nav-contact-btn{color:var(--white) !important}
+[data-theme="light"] .proj-card{background:var(--bg2)}
+[data-theme="light"] .proj-filter.active{color:#f5f2ec}
+[data-theme="light"] .whatsapp-btn{background:var(--bg2);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+
+/* Theme toggle button */
+.theme-toggle{
+  width:32px;height:32px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:none;
+  font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:border-color 0.3s,transform 0.3s;
+}
+.theme-toggle:hover{
+  border-color:var(--gold);
+  transform:scale(1.1);
 }

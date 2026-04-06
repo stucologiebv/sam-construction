@@ -303,6 +303,29 @@
     });
   }
 
+  // ── Theme toggle ──
+  var themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    var savedTheme;
+    try { savedTheme = localStorage.getItem('samTheme'); } catch(e) {}
+    if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeBtn.textContent = '🌙';
+    }
+    themeBtn.addEventListener('click', function() {
+      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        themeBtn.textContent = '☀️';
+        try { localStorage.setItem('samTheme', 'dark'); } catch(e) {}
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeBtn.textContent = '🌙';
+        try { localStorage.setItem('samTheme', 'light'); } catch(e) {}
+      }
+    });
+  }
+
   // ── Auto year in footer ──
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
