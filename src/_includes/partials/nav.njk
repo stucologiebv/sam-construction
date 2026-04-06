@@ -4,6 +4,7 @@
   </a>
   <div class="nav-right">
     <ul class="nav-links" id="navLinks">
+      <li{% if page.url == '/' %} class="active"{% endif %}><a href="/" data-fr="Accueil" data-de="Startseite" data-en="Home" data-lb="Heem">Home</a></li>
       <li class="has-dropdown{% if '/services/' in page.url %} active{% endif %}">
         <span class="nav-label" data-fr="Services" data-de="Leistungen" data-en="Services" data-lb="Servicer">Services</span>
         <ul class="dropdown">
