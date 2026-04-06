@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
       data: "_data"
     },
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
+    pathPrefix: "/sam-construction/"
   };
 };

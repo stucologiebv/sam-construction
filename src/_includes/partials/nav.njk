@@ -1,32 +1,32 @@
 <nav id="nav" aria-label="Main">
-  <a href="/" class="logo" aria-label="SAM Construction — Luxembourg, Est. 2009">
+  <a href="{{ '/' | url }}" class="logo" aria-label="SAM Construction — Luxembourg, Est. 2009">
     {% include "partials/logo.njk" %}
   </a>
   <div class="nav-right">
     <ul class="nav-links" id="navLinks">
-      <li{% if page.url == '/' %} class="active"{% endif %}><a href="/" data-fr="Accueil" data-de="Startseite" data-en="Home" data-lb="Heem">Home</a></li>
+      <li{% if page.url == '/' %} class="active"{% endif %}><a href="{{ '/' | url }}" data-fr="Accueil" data-de="Startseite" data-en="Home" data-lb="Heem">Home</a></li>
       <li class="has-dropdown{% if '/services/' in page.url %} active{% endif %}">
         <span class="nav-label" data-fr="Services" data-de="Leistungen" data-en="Services" data-lb="Servicer">Services</span>
         <ul class="dropdown">
           <div class="dropdown-inner">
-          <li><a href="/services/new-construction/" data-fr="Construction neuve" data-de="Neubau" data-en="New Construction" data-lb="Neibau">New Construction</a></li>
-          <li><a href="/services/renovation/" data-fr="Rénovation" data-de="Renovierung" data-en="Renovation" data-lb="Renovéierung">Renovation</a></li>
-          <li><a href="/services/demolition/" data-fr="Démolition" data-de="Abbruch" data-en="Demolition" data-lb="Ofbroch">Demolition</a></li>
-          <li><a href="/services/interior-finishing/" data-fr="Aménagement intérieur" data-de="Innenausbau" data-en="Interior Finishing" data-lb="Interieur">Interior Finishing</a></li>
-          <li><a href="/services/project-development/" data-fr="Développement de projet" data-de="Projektentwicklung" data-en="Project Development" data-lb="Projektentwicklung">Project Development</a></li>
-          <li><a href="/services/civil-engineering/" data-fr="Génie civil" data-de="Tiefbau" data-en="Civil Engineering" data-lb="Génie Civil">Civil Engineering</a></li>
-          <li><a href="/services/landscaping/" data-fr="Aménagement extérieur" data-de="Landschaftsbau" data-en="Landscaping" data-lb="Landschaftsgestaltung">Landscaping</a></li>
-          <li><a href="/services/facade-cleaning/" data-fr="Nettoyage de façade" data-de="Fassadenreinigung" data-en="Façade Cleaning" data-lb="Fassadereinigung">Façade Cleaning</a></li>
-          <li><a href="/services/sanitary-systems/" data-fr="Sanitaire &amp; systèmes" data-de="Sanitär &amp; Haustechnik" data-en="Sanitary &amp; Systems" data-lb="Sanitär &amp; Systemer">Sanitary &amp; Systems</a></li>
-          <li><a href="/services/real-estate/" data-fr="Immobilier" data-de="Immobilien" data-en="Real Estate" data-lb="Immobilien">Real Estate</a></li>
+          <li><a href="{{ '/services/new-construction/' | url }}" data-fr="Construction neuve" data-de="Neubau" data-en="New Construction" data-lb="Neibau">New Construction</a></li>
+          <li><a href="{{ '/services/renovation/' | url }}" data-fr="Rénovation" data-de="Renovierung" data-en="Renovation" data-lb="Renovéierung">Renovation</a></li>
+          <li><a href="{{ '/services/demolition/' | url }}" data-fr="Démolition" data-de="Abbruch" data-en="Demolition" data-lb="Ofbroch">Demolition</a></li>
+          <li><a href="{{ '/services/interior-finishing/' | url }}" data-fr="Aménagement intérieur" data-de="Innenausbau" data-en="Interior Finishing" data-lb="Interieur">Interior Finishing</a></li>
+          <li><a href="{{ '/services/project-development/' | url }}" data-fr="Développement de projet" data-de="Projektentwicklung" data-en="Project Development" data-lb="Projektentwicklung">Project Development</a></li>
+          <li><a href="{{ '/services/civil-engineering/' | url }}" data-fr="Génie civil" data-de="Tiefbau" data-en="Civil Engineering" data-lb="Génie Civil">Civil Engineering</a></li>
+          <li><a href="{{ '/services/landscaping/' | url }}" data-fr="Aménagement extérieur" data-de="Landschaftsbau" data-en="Landscaping" data-lb="Landschaftsgestaltung">Landscaping</a></li>
+          <li><a href="{{ '/services/facade-cleaning/' | url }}" data-fr="Nettoyage de façade" data-de="Fassadenreinigung" data-en="Façade Cleaning" data-lb="Fassadereinigung">Façade Cleaning</a></li>
+          <li><a href="{{ '/services/sanitary-systems/' | url }}" data-fr="Sanitaire &amp; systèmes" data-de="Sanitär &amp; Haustechnik" data-en="Sanitary &amp; Systems" data-lb="Sanitär &amp; Systemer">Sanitary &amp; Systems</a></li>
+          <li><a href="{{ '/services/real-estate/' | url }}" data-fr="Immobilier" data-de="Immobilien" data-en="Real Estate" data-lb="Immobilien">Real Estate</a></li>
           </div>
         </ul>
       </li>
-      <li{% if page.url == '/projects/' %} class="active"{% endif %}><a href="/projects/" data-fr="Projets" data-de="Projekte" data-en="Projects" data-lb="Projeten">Projects</a></li>
-      <li{% if page.url == '/about/' %} class="active"{% endif %}><a href="/about/" data-fr="À propos" data-de="Über uns" data-en="About" data-lb="Iwwer ons">About</a></li>
-      <li{% if '/blog/' in page.url %} class="active"{% endif %}><a href="/blog/" data-fr="Blog" data-de="Blog" data-en="Blog" data-lb="Blog">Blog</a></li>
-      <li{% if page.url == '/faq/' %} class="active"{% endif %}><a href="/faq/" data-fr="FAQ" data-de="FAQ" data-en="FAQ" data-lb="FAQ">FAQ</a></li>
-      <li{% if page.url == '/contact/' %} class="active"{% endif %}><a href="/contact/" class="nav-contact-btn" data-fr="Contact" data-de="Kontakt" data-en="Contact" data-lb="Kontakt">Contact</a></li>
+      <li{% if page.url == '/projects/' %} class="active"{% endif %}><a href="{{ '/projects/' | url }}" data-fr="Projets" data-de="Projekte" data-en="Projects" data-lb="Projeten">Projects</a></li>
+      <li{% if page.url == '/about/' %} class="active"{% endif %}><a href="{{ '/about/' | url }}" data-fr="À propos" data-de="Über uns" data-en="About" data-lb="Iwwer ons">About</a></li>
+      <li{% if '/blog/' in page.url %} class="active"{% endif %}><a href="{{ '/blog/' | url }}" data-fr="Blog" data-de="Blog" data-en="Blog" data-lb="Blog">Blog</a></li>
+      <li{% if page.url == '/faq/' %} class="active"{% endif %}><a href="{{ '/faq/' | url }}" data-fr="FAQ" data-de="FAQ" data-en="FAQ" data-lb="FAQ">FAQ</a></li>
+      <li{% if page.url == '/contact/' %} class="active"{% endif %}><a href="{{ '/contact/' | url }}" class="nav-contact-btn" data-fr="Contact" data-de="Kontakt" data-en="Contact" data-lb="Kontakt">Contact</a></li>
     </ul>
     {% include "partials/lang-switcher.njk" %}
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
