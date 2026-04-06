@@ -765,8 +765,8 @@ nav.scrolled{
 .proj-swipe-hint{display:none}
 
 @media(max-width:768px){
-  .proj-track{gap:0}
-  .proj-track .proj{min-width:100%;height:350px}
+  .proj-track{gap:0 !important}
+  .proj-track .proj{min-width:100% !important;height:350px;border-radius:0}
   .proj-slider{overflow:hidden;touch-action:pan-y}
   .proj-slider-nav{gap:16px;margin-top:20px}
   .proj-arrow{width:40px;height:40px;font-size:16px}
