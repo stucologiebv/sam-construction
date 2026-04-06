@@ -209,8 +209,9 @@
   var dotsWrap = document.getElementById('projDots');
   if (track && prevBtn && nextBtn && dotsWrap) {
     var slides = track.querySelectorAll('.proj');
-    var isMobile = window.innerWidth <= 768;
-    var visible = isMobile ? 1 : 3;
+    var sliderWidth = track.parentElement.offsetWidth;
+    var slideWidth = slides[0].offsetWidth;
+    var visible = Math.round(sliderWidth / slideWidth) || 1;
     var current = 0;
     var total = slides.length;
     var maxPos = Math.max(total - visible, 0);
