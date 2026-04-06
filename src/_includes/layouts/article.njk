@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+bodyClass: has-nav-logo
+footerType: simple
+---
+<article class="article-wrapper">
+  <header class="article-header">
+    <span class="article-date">{{ articleDate }}</span>
+    <h1 class="article-title">{{ title }}</h1>
+    <div class="article-gold-line"></div>
+  </header>
+
+  <div class="article-body">
+    {{ content | safe }}
+  </div>
+
+  <a href="/blog/" class="article-back" data-fr="&larr; Retour au blog" data-de="&larr; Zurück zum Blog" data-en="&larr; Back to Blog" data-lb="&larr; Zréck zum Blog">&larr; Back to Blog</a>
+</article>

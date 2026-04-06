@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+bodyClass: has-nav-logo
+footerType: simple
+---
+<section class="hero-service">
+  <div class="eyebrow">
+    <div class="eyebrow-line"></div>
+    <span class="eyebrow-text" data-fr="Nos services" data-de="Unsere Leistungen" data-en="Our Services" data-lb="Eis Servicer">Our Services</span>
+  </div>
+  <h1 data-fr="{{ titleFr }}" data-de="{{ titleDe }}" data-en="{{ title }}" data-lb="{{ titleLb }}">{{ title }}</h1>
+  <p class="subtitle" data-fr="{{ subtitleFr }}" data-de="{{ subtitleDe }}" data-en="{{ subtitle }}" data-lb="{{ subtitleLb }}">{{ subtitle }}</p>
+</section>
+
+<section class="content-section">
+{{ content | safe }}
+</section>
+
+<section class="cta-section">
+  <h2 data-fr="Prêt à démarrer votre projet ?" data-de="Bereit für Ihr Projekt?" data-en="Ready to Start Your Project?" data-lb="Prett fir Äre Projet ze starten?">Ready to Start Your Project?</h2>
+  <p data-fr="Contactez-nous aujourd'hui pour une consultation gratuite et un devis détaillé." data-de="Kontaktieren Sie uns noch heute für eine kostenlose Beratung und ein detailliertes Angebot." data-en="Contact us today for a free consultation and detailed quote." data-lb="Kontaktéiert eis haut fir eng gratis Berodung an en detailléierte Devis.">Contact us today for a free consultation and detailed quote.</p>
+  <a href="/contact/" class="cta-btn" data-fr="Contactez-nous" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-lb="Kontaktéiert eis">Get in Touch</a><br>
+  <a href="/services/" class="back-services" data-fr="&larr; Retour à tous les services" data-de="&larr; Zurück zu allen Leistungen" data-en="&larr; Back to All Services" data-lb="&larr; Zréck zu allen Servicer">&larr; Back to All Services</a>
+</section>

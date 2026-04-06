@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{% if titleFull %}{{ titleFull }}{% else %}{{ title }} — SAM Construction Luxembourg{% endif %}</title>
+<meta name="description" content="{{ description }}">
+{% if ogTitle %}
+<meta property="og:title" content="{{ ogTitle | default(title + ' — SAM Construction Luxembourg') }}">
+<meta property="og:description" content="{{ ogDescription | default(description) }}">
+<meta property="og:type" content="{{ ogType | default('website') }}">
+<meta property="og:url" content="https://www.samconstruction.lu{{ page.url }}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle | default(title + ' — SAM Construction Luxembourg') }}">
+<meta name="twitter:description" content="{{ ogDescription | default(description) }}">
+{% endif %}
+<link rel="canonical" href="https://www.samconstruction.lu{{ page.url }}">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:image" content="https://www.samconstruction.lu/assets/images/og-image.png">
+<meta name="twitter:image" content="https://www.samconstruction.lu/assets/images/og-image.png">
+<meta name="theme-color" content="#0b1a0b">
+<link rel="alternate" hreflang="fr" href="https://www.samconstruction.lu{{ page.url }}?lang=fr">
+<link rel="alternate" hreflang="de" href="https://www.samconstruction.lu{{ page.url }}?lang=de">
+<link rel="alternate" hreflang="en" href="https://www.samconstruction.lu{{ page.url }}?lang=en">
+<link rel="alternate" hreflang="lb" href="https://www.samconstruction.lu{{ page.url }}?lang=lb">
+<link rel="alternate" hreflang="x-default" href="https://www.samconstruction.lu{{ page.url }}?lang=fr">
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-logo">SAM</div>
+  <div class="loader-line"></div>
+  <div class="loader-sub">Construction s.a.r.l</div>
+</div>
+
+<!-- NAV -->
+{% include "partials/nav.njk" %}
+
+{{ content | safe }}
+
+<!-- FOOTER -->
+{% if footerType == "simple" %}
+{% include "partials/footer-simple.njk" %}
+{% else %}
+{% include "partials/footer-full.njk" %}
+{% endif %}
+
+<!-- WHATSAPP -->
+{% include "partials/whatsapp.njk" %}
+
+<!-- COOKIE CONSENT -->
+{% include "partials/cookie-banner.njk" %}
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>

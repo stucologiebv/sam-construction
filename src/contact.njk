@@ -1,0 +1,100 @@
+---
+layout: layouts/page.njk
+title: Contact
+description: "Get in touch with SAM Construction for a free consultation and detailed quote. Based in Michelau, serving all of Luxembourg."
+backLink: /
+backTextEn: "← Back to Home"
+backTextFr: "← Retour à l'accueil"
+backTextDe: "← Zurück zur Startseite"
+backTextLb: "← Zréck op d'Haaptsäit"
+---
+
+<section class="quote-section" id="contact">
+  <div class="quote-layout">
+    <div class="ql-left reveal">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text" data-fr="Contactez-nous" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-lb="Kontakt ophuelen">Get in Touch</span>
+      </div>
+      <h2 class="display-title" data-fr="Démarrez votre projet" data-de="Starten Sie Ihr Projekt" data-en="Start Your Project" data-lb="Äre Projet starten">Start Your<br>Project</h2>
+      <p data-fr="Parlez-nous de votre vision. Nous vous répondrons dans les 24 heures avec un devis détaillé et sans engagement, adapté à vos besoins." data-de="Erzählen Sie uns von Ihrer Vision. Wir antworten innerhalb von 24 Stunden mit einem detaillierten, unverbindlichen Angebot, das auf Ihre Bedürfnisse zugeschnitten ist." data-en="Tell us about your vision. We'll respond within 24 hours with a detailed, no-obligation quote tailored to your needs." data-lb="Erzielt eis vun Ärer Visioun. Mir äntweren bannent 24 Stonnen mat engem detailléierten, onverbindlechen Offert.">
+        Tell us about your vision. We'll respond within 24 hours with a detailed, no-obligation quote tailored to your needs.
+      </p>
+      <div class="contact-stack">
+        <div class="contact-row">
+          <span class="cr-icon" aria-hidden="true">📍</span>
+          <span>18A Griffelslee, 9171 Michelau, Luxembourg</span>
+        </div>
+        <div class="contact-row">
+          <span class="cr-icon" aria-hidden="true">📞</span>
+          <span><a href="tel:+352000000000" class="contact-link">+352 000 000 000</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="cr-icon" aria-hidden="true">✉️</span>
+          <span><a href="mailto:info@samconstruction.lu" class="contact-link">info@samconstruction.lu</a></span>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2577.5!2d6.0486!3d49.8744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s18A+Griffelslee%2C+9171+Michelau%2C+Luxembourg!5e0!3m2!1sen!2slu!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <!-- TODO: add action="" when form backend is configured (Formspree / Web3Forms / Cloudflare Pages Functions) -->
+      <form class="form" method="post" novalidate>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="f-firstname" data-fr="Prénom" data-de="Vorname" data-en="First Name" data-lb="Virnumm">First Name</label>
+            <input id="f-firstname" name="firstname" type="text" placeholder="John" autocomplete="given-name" required/>
+          </div>
+          <div class="f-group">
+            <label for="f-lastname" data-fr="Nom" data-de="Nachname" data-en="Last Name" data-lb="Familljennumm">Last Name</label>
+            <input id="f-lastname" name="lastname" type="text" placeholder="Doe" autocomplete="family-name" required/>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="f-email" data-fr="E-mail" data-de="E-Mail" data-en="Email" data-lb="E-Mail">Email</label>
+            <input id="f-email" name="email" type="email" placeholder="john@example.com" autocomplete="email" required/>
+          </div>
+          <div class="f-group">
+            <label for="f-phone" data-fr="Téléphone" data-de="Telefon" data-en="Phone" data-lb="Telefon">Phone</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="+352 ..." autocomplete="tel"/>
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="f-service" data-fr="Service" data-de="Leistung" data-en="Service" data-lb="Service">Service</label>
+          <select id="f-service" name="service" required>
+            <option value="" data-fr="Choisir un service..." data-de="Service wählen..." data-en="Select a service..." data-lb="Service wielen...">Select a service...</option>
+            <option value="new-construction" data-fr="Construction neuve" data-de="Neubau" data-en="New Construction" data-lb="Neibau">New Construction</option>
+            <option value="renovation" data-fr="Rénovation" data-de="Renovierung" data-en="Renovation" data-lb="Renovéierung">Renovation</option>
+            <option value="demolition" data-fr="Démolition" data-de="Abbruch" data-en="Demolition" data-lb="Ofbroch">Demolition</option>
+            <option value="interior-finishing" data-fr="Aménagement intérieur" data-de="Innenausbau" data-en="Interior Finishing" data-lb="Interieur Ofschloss">Interior Finishing</option>
+            <option value="project-development" data-fr="Développement de projet" data-de="Projektentwicklung" data-en="Project Development" data-lb="Projektentwicklung">Project Development</option>
+            <option value="civil-engineering" data-fr="Génie civil" data-de="Tiefbau" data-en="Civil Engineering" data-lb="Génie Civil">Civil Engineering</option>
+            <option value="landscaping" data-fr="Aménagement extérieur" data-de="Landschaftsbau" data-en="Landscaping" data-lb="Landschaftsgestaltung">Landscaping</option>
+            <option value="facade-cleaning" data-fr="Nettoyage de façade" data-de="Fassadenreinigung" data-en="Façade Cleaning" data-lb="Fassadereinigung">Façade Cleaning</option>
+            <option value="sanitary-systems" data-fr="Sanitaire &amp; systèmes" data-de="Sanitär &amp; Haustechnik" data-en="Sanitary & Systems" data-lb="Sanitär & Systemer">Sanitary &amp; Systems</option>
+            <option value="real-estate" data-fr="Immobilier" data-de="Immobilien" data-en="Real Estate" data-lb="Immobilien">Real Estate</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label for="f-message" data-fr="Description du projet" data-de="Projektbeschreibung" data-en="Project Description" data-lb="Projektbeschreiwung">Project Description</label>
+          <textarea id="f-message" name="message" placeholder="Describe your project..." required></textarea>
+        </div>
+        <!-- Honeypot (bots fill this) -->
+        <div class="f-group" aria-hidden="true" style="position:absolute;left:-9999px">
+          <label for="f-website">Website</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div class="f-group f-consent">
+          <label>
+            <input type="checkbox" name="consent" required>
+            <span data-fr="J'accepte que mes données soient traitées conformément à la politique de confidentialité." data-de="Ich bin damit einverstanden, dass meine Daten gemäß der Datenschutzerklärung verarbeitet werden." data-en="I agree that my data will be processed according to the privacy policy." data-lb="Ech si mat der Verschaffung vu menge Donnéeën laut der Dateschutzerklärung averstanen.">I agree that my data will be processed according to the privacy policy.</span>
+          </label>
+        </div>
+        <button type="submit" class="f-submit"><span data-fr="Envoyer la demande →" data-de="Anfrage senden →" data-en="Send Quote Request →" data-lb="Offertufro schécken →">Send Quote Request →</span></button>
+      </form>
+    </div>
+  </div>
+</section>
