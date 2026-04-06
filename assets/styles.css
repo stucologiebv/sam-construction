@@ -227,20 +227,20 @@ nav.scrolled{
 }
 .hero-brand-svg{
   display:block;
-  height:260px;
+  height:320px;
   width:auto;
-  filter:drop-shadow(0 6px 40px rgba(0,0,0,0.5));
+  filter:drop-shadow(0 8px 50px rgba(0,0,0,0.5));
 }
 @media(max-width:1440px){
-  .hero-brand-svg{height:220px}
+  .hero-brand-svg{height:270px}
   .hero-brand{margin-left:clamp(30px, 8vw, 160px)}
 }
 @media(max-width:1024px){
-  .hero-brand-svg{height:180px}
+  .hero-brand-svg{height:220px}
   .hero-brand{margin-left:clamp(20px, 6vw, 100px)}
 }
 @media(max-width:640px){
-  .hero-brand-svg{height:140px}
+  .hero-brand-svg{height:160px}
   .hero-brand{margin-left:0}
 }
 
