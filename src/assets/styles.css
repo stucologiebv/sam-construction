@@ -765,9 +765,9 @@ nav.scrolled{
 .proj-swipe-hint{display:none}
 
 @media(max-width:768px){
-  .proj-track{gap:0 !important}
-  .proj-track .proj{min-width:100% !important;height:350px;border-radius:0}
   .proj-slider{overflow:hidden;touch-action:pan-y}
+  .proj-track{gap:0 !important}
+  .proj-track .proj{width:100% !important;min-width:100% !important;max-width:100% !important;height:350px;border-radius:0;flex:0 0 100%}
   .proj-slider-nav{gap:16px;margin-top:20px}
   .proj-arrow{width:40px;height:40px;font-size:16px}
   .proj-swipe-hint{
