@@ -1495,9 +1495,9 @@ section[id],main[id]{scroll-margin-top:100px}
   background:var(--white);
   transition:transform 0.3s,opacity 0.3s;
 }
-.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-toggle.open span:nth-child(2){opacity:0}
-.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-toggle.open span:nth-child(1){transform:none}
+.nav-toggle.open span:nth-child(2){opacity:1}
+.nav-toggle.open span:nth-child(3){transform:none}
 
 /* Mobile nav behavior */
 @media(max-width:1024px){
