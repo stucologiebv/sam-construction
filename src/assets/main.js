@@ -5,34 +5,35 @@
   var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
   var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ── Custom cursor (desktop only, pointer devices with hover) ──
+  // ── Custom cursor — hammer + nail trail (desktop only) ──
   if (!isTouch && window.matchMedia && window.matchMedia('(hover: hover)').matches) {
     var cursor = document.getElementById('cursor');
     var ring = document.getElementById('cursorRing');
     if (cursor && ring) {
       var mx = 0, my = 0, rx = 0, ry = 0;
+
       document.addEventListener('mousemove', function (e) {
         mx = e.clientX; my = e.clientY;
         cursor.style.left = mx + 'px';
         cursor.style.top = my + 'px';
       });
       (function animate() {
-        rx += (mx - rx) * 0.12;
-        ry += (my - ry) * 0.12;
+        rx += (mx - rx) * 0.1;
+        ry += (my - ry) * 0.1;
         ring.style.left = rx + 'px';
         ring.style.top = ry + 'px';
         requestAnimationFrame(animate);
       })();
       document.querySelectorAll('a,button,.service-item,.proj,.testimonial-card,.blog-card,.faq-question,.whatsapp-btn,.cookie-btn').forEach(function (el) {
         el.addEventListener('mouseenter', function () {
-          ring.style.width = '60px';
-          ring.style.height = '60px';
-          ring.style.borderColor = 'rgba(201,168,76,0.8)';
+          ring.style.width = '48px';
+          ring.style.height = '48px';
+          ring.style.borderColor = 'rgba(201,168,76,0.6)';
         });
         el.addEventListener('mouseleave', function () {
-          ring.style.width = '36px';
-          ring.style.height = '36px';
-          ring.style.borderColor = 'rgba(201,168,76,0.5)';
+          ring.style.width = '32px';
+          ring.style.height = '32px';
+          ring.style.borderColor = 'rgba(201,168,76,0.35)';
         });
       });
     }
